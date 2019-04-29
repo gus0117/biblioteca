@@ -17,9 +17,9 @@ public class TestLibro {
         ILibroDao testLibro = new LibroDaoImp();
         Calendar fecha = Calendar.getInstance();
         fecha.set(1980, 5, 13);
-        Libro libro1 = new Libro(10, "isbn1", "BBBBB", 200, "Autor1", "Terror", fecha);
-        Libro libro2 = new Libro(20, "isbn2", "ACCCC", 400, "Autor2", "Drama", fecha);
-        Libro libro3 = new Libro(30, "isbn3", "AAAa", 120, "Autor3", "Fantastico", fecha);
+        Libro libro1 = new Libro(10, 1, "BBBBB", 200, "Autor1", "Terror", fecha);
+        Libro libro2 = new Libro(20, 2, "ACCCC", 400, "Autor2", "Drama", fecha);
+        Libro libro3 = new Libro(30, 3, "AAAa", 120, "Autor3", "Fantastico", fecha);
         
         
         //Guardando libros

@@ -7,13 +7,9 @@ package aplicacion.modelo.dominio;
 
 import java.util.Calendar;
 
-/**
- *
- * @author Rocio
- */
 public class Libro {
     private int codigo;
-    private String isbn;
+    private int isbn;
     private String titulo;
     private int cantPaginas;
     private String autores;
@@ -23,7 +19,7 @@ public class Libro {
     public Libro() {
     }
 
-    public Libro(int codigo, String isbn, String titulo, int cantPaginas, String autores, String tematica, Calendar fechaEdicion) {
+    public Libro(int codigo, int isbn, String titulo, int cantPaginas, String autores, String tematica, Calendar fechaEdicion) {
         this.codigo = codigo;
         this.isbn = isbn;
         this.titulo = titulo;
@@ -59,14 +55,14 @@ public class Libro {
     /**
      * @return the isbn
      */
-    public String getIsbn() {
+    public int getIsbn() {
         return isbn;
     }
 
     /**
      * @param isbn the isbn to set
      */
-    public void setIsbn(String isbn) {
+    public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
 
