@@ -34,15 +34,17 @@ public class LibroDaoImp implements Serializable, ILibroDao {
     public void borrarLibro(Libro libro) {
         listaLibros.borrarLibro(libro);
     }
-    
+    @Override
     public void mostrarLista(){
         for(int i = 0; i < listaLibros.getListaLibros().size(); i++){
            listaLibros.obtenerLibroPorIndice(i).mostrarLibro();
         }
     }
+    @Override
     public void ordenarListaLibros(boolean ascendente){
         listaLibros.ordernarLibrosPorNombre(ascendente);
     }
+    @Override
     public void mostrarListaSegunNombre(char letra){
         listaLibros.mostrarListaSegunNombre(letra);
     }

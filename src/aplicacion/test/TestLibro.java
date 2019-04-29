@@ -10,14 +10,11 @@ import aplicacion.dao.imp.LibroDaoImp;
 import aplicacion.modelo.dominio.Libro;
 import java.util.Calendar;
 
-/**
- *
- * @author Rocio
- */
+
 public class TestLibro {
     public static void main(String[] args){
         //Instancia de objetos
-        LibroDaoImp testLibro = new LibroDaoImp();
+        ILibroDao testLibro = new LibroDaoImp();
         Calendar fecha = Calendar.getInstance();
         fecha.set(1980, 5, 13);
         Libro libro1 = new Libro(10, "isbn1", "BBBBB", 200, "Autor1", "Terror", fecha);

@@ -12,7 +12,10 @@ import aplicacion.modelo.dominio.Libro;
  * @author Rocio
  */
 public interface ILibroDao {
-    public abstract void guardarLibro(Libro libro);
-    public abstract void modificarLibro(Libro libro);
-    public abstract void borrarLibro(Libro libro);
+    public void guardarLibro(Libro libro);
+    public void modificarLibro(Libro libro);
+    public void borrarLibro(Libro libro);
+    public void mostrarLista();
+    public void ordenarListaLibros(boolean ascendente);
+    public void mostrarListaSegunNombre(char letra);
 }
