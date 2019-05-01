@@ -5,6 +5,8 @@
  */
 package aplicacion.modelo.dominio;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class Libro {
@@ -37,6 +39,14 @@ public class Libro {
         System.out.println("Titulo: "+this.titulo);
 //        System.out.println("Cant Paginas: "+this.cantPaginas);
 //        System.out.println("Autores: "+this.autores);
+    }
+    /**
+     * Formatea la fecha de edicion a "yyyy-mm-dd"
+     * @return 
+     */
+    public String obtenerFechaFormateada(){
+        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        return sdf.format(this.fechaEdicion.getTime());
     }
     /**
      * @return the codigo
