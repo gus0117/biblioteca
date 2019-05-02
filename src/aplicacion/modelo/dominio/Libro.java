@@ -7,21 +7,22 @@ package aplicacion.modelo.dominio;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 public class Libro {
     private int codigo;
     private int isbn;
     private String titulo;
     private int cantPaginas;
-    private String autores;
+    private List<Autor> autores;
     private String tematica;
-    private Calendar fechaEdicion;
+    private Date fechaEdicion;
 
     public Libro() {
     }
 
-    public Libro(int codigo, int isbn, String titulo, int cantPaginas, String autores, String tematica, Calendar fechaEdicion) {
+    public Libro(int codigo, int isbn, String titulo, int cantPaginas, List<Autor> autores, String tematica, Date fechaEdicion) {
         this.codigo = codigo;
         this.isbn = isbn;
         this.titulo = titulo;
@@ -107,14 +108,14 @@ public class Libro {
     /**
      * @return the autores
      */
-    public String getAutores() {
+    public List<Autor> getAutores() {
         return autores;
     }
 
     /**
      * @param autores the autores to set
      */
-    public void setAutores(String autores) {
+    public void setAutores(List<Autor> autores) {
         this.autores = autores;
     }
 
@@ -135,14 +136,14 @@ public class Libro {
     /**
      * @return the fechaEdicion
      */
-    public Calendar getFechaEdicion() {
+    public Date getFechaEdicion() {
         return fechaEdicion;
     }
 
     /**
      * @param fechaEdicion the fechaEdicion to set
      */
-    public void setFechaEdicion(Calendar fechaEdicion) {
+    public void setFechaEdicion(Date fechaEdicion) {
         this.fechaEdicion = fechaEdicion;
     }
 

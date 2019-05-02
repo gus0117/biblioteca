@@ -5,10 +5,13 @@
  */
 package aplicacion.test;
 
+import aplicacion.dao.IAutorDao;
 import aplicacion.dao.ILibroDao;
+import aplicacion.dao.imp.AutorDaoImp;
 import aplicacion.dao.imp.LibroDaoImp;
 import aplicacion.modelo.dominio.Libro;
 import java.util.Calendar;
+import java.util.Date;
 
 
 public class TestLibro {
@@ -16,10 +19,13 @@ public class TestLibro {
         //Instancia de objetos
         ILibroDao testLibro = new LibroDaoImp();
         Calendar fecha = Calendar.getInstance();
+        Date fechaDate = fecha.getTime();
         fecha.set(1980, 5, 13);
-        Libro libro1 = new Libro(10, 1, "BBBBB", 200, "Autor1", "Terror", fecha);
-        Libro libro2 = new Libro(20, 2, "ACCCC", 400, "Autor2", "Drama", fecha);
-        Libro libro3 = new Libro(30, 3, "AAAa", 120, "Autor3", "Fantastico", fecha);
+        //Generar Autores
+        IAutorDao autorDao = new AutorDaoImp();
+        Libro libro1 = new Libro(10, 1, "BBBBB", 200, autorDao.obtenerAutores(), "Terror", fechaDate);
+        Libro libro2 = new Libro(20, 2, "ACCCC", 400, autorDao.obtenerAutores(), "Drama", fechaDate);
+        Libro libro3 = new Libro(30, 3, "AAAa", 120, autorDao.obtenerAutores(), "Fantastico", fechaDate);
         
         
         //Guardando libros
@@ -28,7 +34,7 @@ public class TestLibro {
         testLibro.guardarLibro(libro3);
         
         //Modificar libro3
-        libro3.setAutores("Autor4");
+        libro3.setTitulo("Libro4");
         testLibro.modificarLibro(libro3);
         
         //Borrar libro1

@@ -49,6 +49,12 @@ public class ListaLibros {
     public int obtenerIndiceLibro(Libro libro){
         return listaLibros.indexOf(libro);
     }
+    /**
+     * Busca un libro especifico por su codigo
+     * @param libro objeto del tipo libro
+     * @return devuelve el indice del objeto libro en la lista
+     * si el libro no se encuentra devuelve -1
+     */
     public int obtenerIndiceLibroPorCodigo(Libro libro){
         //Buscar por codigo
         int i = 0;
